@@ -34,9 +34,9 @@ DONE_TODAY_FILE="$DONE_LOG_FOLDER/DoneToday.txt"
 LOGGED_TODAY_FILE="$DONE_LOG_FOLDER/LoggedToday.txt"
 LOG_NOW_FILE="$DONE_LOG_FOLDER/JustDone.txt"
 
-OFOC="com.omnigroup.OmniFocus"
-if [ ! -d "$HOME/Library/Caches/$OFOC" ]; then OFOC=$OFOC.MacAppStore; fi
-OFQUERY="sqlite3 $HOME/Library/Caches/$OFOC/OmniFocusDatabase2"
+OFOC="com.omnigroup.OmniFocus2"
+if [ ! -d "$HOME/Library/Containers/com.omnigroup.OmniFocus2/Data/Library/Caches/$OFOC" ]; then OFOC=$OFOC.MacAppStore; fi
+OFQUERY="sqlite3 $HOME/Library/Containers/com.omnigroup.OmniFocus2/Data/Library/Caches/$OFOC/OmniFocusDatabase2"
 START_OF_DAY=$(date -v0H -v0M -v0S +%s) #Midnight at the start of today: set the time component to 00:00
 TODAY=$(date "+%Y-%m-%d")
 
